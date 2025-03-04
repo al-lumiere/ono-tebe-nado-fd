@@ -5,7 +5,7 @@
   display: grid;
   grid-template-columns: 1fr min-content 1fr;
   align-items: center;
-  padding: 88px 50px 96px 50px;
+  padding: 92px 50px 96px 50px;
   color: #000;
   font-weight: 400; 
   font-size: 18px;
@@ -266,9 +266,9 @@
 
 .about__title {
   grid-area: about__title;
-  justify-self: start;
-  padding-top: 10px; 
+  justify-self: start; 
   align-self: center;
+  padding-top: 10px;
   font-weight: 700;
   font-size: 40px;
   text-transform: uppercase;
@@ -311,9 +311,9 @@
 .footer__menu-list-item {
   font-weight: 400;
   font-size: 18px;
+  line-height: normal;
   text-align: center;
-  list-style: none;
-  line-height: normal; 
+  list-style: none; 
 }
 
 .footer__social-list {
