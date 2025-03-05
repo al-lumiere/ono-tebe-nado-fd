@@ -41,3 +41,7 @@ img {
 button {
   font: inherit;
 }
+
+p {
+  font-style: normal;
+}

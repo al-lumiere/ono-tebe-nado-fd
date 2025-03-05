@@ -5,7 +5,7 @@
   display: grid;
   grid-template-columns: 1fr min-content 1fr;
   align-items: center;
-  padding: 100px 50px 96px 50px;
+  padding: 88px 50px 96px 50px;
   color: #000;
   font-weight: 400;
   font-size: 18px;
@@ -19,36 +19,30 @@
 
 .header__links-list {
   display: flex;
-  gap: 29px;
+  gap: 32px;
   list-style: circle;
 }
 
-/* Выделила эти ссылки в отдельные классы,
-чтобы еще точнее выровнять */
-
-.header__links-list-item-second {
-  padding-left: 2px;
-}
-
-.header__links-list-item-third {
-  padding-left: 6px;
-}
 
 .header__links-list-item_no-bullit {
   list-style: none;
 }
 
-.header__link, .address__tel, .address__mail, .footer__menu-link {
+.header__link, .address__link, .footer__menu-link {
   text-decoration: underline 1px;
   text-underline-position: under;
 }
 
 
-.address.header__address {
-  justify-self: end;
+.address {
   max-width: 240px;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.header__address {
+  justify-self: end;
   padding-right: 36px;
-  font-style: none;
 }
 
 /* Заголовок – флексбокс. Плюс внизу тоже флексбокс */
@@ -121,6 +115,7 @@
   text-align: center;
   text-transform: uppercase;
   background-color: transparent;
+  cursor: pointer;
 }
 
 /* Секция lots. Сами карточки -
@@ -147,6 +142,7 @@
 }
 
 .lots__card-list-item {
+  position: relative;
   display: flex;
   flex-direction: column;
   flex-grow: 1;
@@ -156,25 +152,25 @@
   min-height: 596px;
   margin: 27px 0px 30px 0px;
   padding: 48px 40px;
-}
-
-.card_type_film {
-  position: relative;
-  background-image: url(../images/card-lot-01.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
 }
 
-.card_type_film.card.overlay {
-  position: absolute;
-  inset: 0;
-  background-color: rgb(0, 0, 0, 0.6);
+.card_type_film {
+  background-image: url(../images/card-lot-01.jpg);
 }
 
-.card-link.card__title {
-  position: relative;
-  z-index: 1;
+.card-link {
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.card__title {
+  height: 100%;
   font-weight: 700;
   font-size: 22px;
   line-height: 120%;
@@ -187,39 +183,17 @@
 }
 
 .card__text {
-  position: relative;
-  z-index: 1;
   font-weight: 400;
   font-size: 20px;
   line-height: 120%;
 }
 
 .card_type_book {
-  position: relative;
   background-image: url(../images/card-lot-02.jpg);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-}
-
-.card_type_book.card.overlay {
-  position: absolute;
-  inset: 0;
-  background-color: rgb(0, 0, 0, 0.6);
 }
 
 .card_type_picture {
-  position: relative;
   background-image: url(../images/card-lot-03.jpg);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-}
-
-.card_type_picture.card.overlay {
-  position: absolute;
-  inset: 0;
-  background-color: rgb(0, 0, 0, 0.6);
 }
 
 .lots__look-more-link {
@@ -248,7 +222,6 @@
 }
 
 .about__logo {
-  position: relative;
   grid-area: about__logo;
   justify-self: center;
   align-self: center;
@@ -259,9 +232,9 @@
 }
 
 .about__logo-image {
-  position: absolute;
-  inset: 64px 45px 62px 47px;
+  display: block;
   width: 148px;
+  margin: 64px 45px 62px 47px;
 }
 
 .about__title {
@@ -279,6 +252,7 @@
   flex-direction: column;
   grid-area: about__text;
   gap: 24px;
+  padding-right: 7.5px;
   font-weight: 400;
   font-size: 20px;
   line-height: 24px;
@@ -297,10 +271,8 @@
   line-height: 24px;
 }
 
-.address.footer__address {
+.footer__address {
   justify-self: start;
-  font-weight: 400;
-
 }
 
 .footer__menu {
@@ -331,3 +303,4 @@
   width: 48px;
   height: 48px;
 }
+
